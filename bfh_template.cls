@@ -1,20 +1,20 @@
 %
-% Main document
+% Stlye
 % ===========================================================================
 % This is part of the document "Project documentation template".
 % Authors: brd3, kaa1
 %
-
-%---------------------------------------------------------------------------
-\documentclass[
-	a4paper,					% paper format
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{bfh_template}
+\LoadClass[a4paper,					% paper format
 	10pt,							% fontsize
 	twoside,					% double-sided
 	openright,				% begin new chapter on right side
 	notitlepage,			% use no standard title page
 	parskip=half,			% set paragraph skip to half of a line
 ]{scrreprt}					% KOMA-script report
-%---------------------------------------------------------------------------
+
+
 
 \raggedbottom
 \KOMAoptions{cleardoublepage=plain}			% Add header and footer on blank pages
@@ -25,9 +25,10 @@
 \usepackage[standard-baselineskips]{cmbright}
 
 \usepackage[ngerman]{babel}										% german hyphenation
+\usepackage[utf8]{inputenc}
 %\usepackage[latin1]{inputenc}  							% Unix/Linux - load extended character set (ISO 8859-1)
-\usepackage[ansinew]{inputenc}  							% Windows - load extended character set (ISO 8859-1)
-\usepackage[T1]{fontenc}											% hyphenation of words with ä,ö and ü
+%\usepackage[ansinew]{inputenc}  							% Windows - load extended character set (ISO 8859-1)
+\usepackage[T1]{fontenc}											% hyphenation of words with â€°,Ë† and Â¸
 \usepackage{textcomp}													% additional symbols
 \usepackage{ae}																% better resolution of Type1-Fonts 
 \usepackage{fancyhdr}													% simple manipulation of header and footer 
@@ -74,7 +75,7 @@
 	hypertexnames = {true},               % no failures "same page(i)"
 	bookmarksopen = {true},               % opens the bar on the left side
 	bookmarksopenlevel = {0},             % depth of opened bookmarks
-	pdftitle = {Template für Bachelor Thesis},	   	% PDF-property
+	pdftitle = {Bachelor Thesis},	   	% PDF-property
 	pdfauthor = {brd3},        					  % PDF-property
 	pdfsubject = {LaTeX Template},        % PDF-property
 	linkcolor = {linkcolor},              % Color of Links
@@ -121,15 +122,6 @@
 \include{datenbanken/glossar}
 %---------------------------------------------------------------------------
 
-% Intro:
-%---------------------------------------------------------------------------
-\begin{document}                              	% Start Document
-\settocdepth{section}														% Set depth of toc
-\pagenumbering{roman}														
-%---------------------------------------------------------------------------
-
-\input{vorspann/titel}					% Titel der Arbeit aus Datei titel.tex lesen
-\input{vorspann/version}				% Versionsnummer und -datum aus Datei version.tex lesen
 
 % Set up header and footer
 %---------------------------------------------------------------------------
@@ -151,93 +143,6 @@
 \pagestyle{plain}
 %---------------------------------------------------------------------------
 
-
-% Title Page and Abstract
-%---------------------------------------------------------------------------
-%\include{vorspann/titelseite_ohne_bild}		% activate for Titelseite ohne Bild
-\include{vorspann/titelseite_mit_bild}			% activate for Titelseite mit Bild
-\include{vorspann/versionen}
-\cleardoubleemptypage
-\setcounter{page}{1}
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Management Summary}
-\include{vorspann/management_summary}
-\cleardoubleemptypage
-%---------------------------------------------------------------------------
-
-% Table of contents
-%---------------------------------------------------------------------------
-\tableofcontents
-\cleardoublepage
-%---------------------------------------------------------------------------
-
-% Main part:
-%---------------------------------------------------------------------------
-\pagenumbering{arabic}
-
-\include{kapitel/einleitung}
-\include{kapitel/anleitungen}
-\include{kapitel/satzspiegeltest}
-\include{kapitel/schlussfolgerungen}
-%---------------------------------------------------------------------------
-
-% Selbständigkeitserklärung
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Selbständigkeitserklärung}
-\include{vorspann/selbstaendigkeitserklaerung}
-%---------------------------------------------------------------------------
-
-% Glossary
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Glossar}
-\renewcommand{\glossaryname}{Glossar}
-\printglossary
-%---------------------------------------------------------------------------
-
-% Bibliography
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\bibliographystyle{IEEEtranS}
-\bibliography{datenbanken/bibliography}{}
-%---------------------------------------------------------------------------
-
-% Listings
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-\listoffigures
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-\listoftables
-%---------------------------------------------------------------------------
-
-% Index
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
-\renewcommand{\indexname}{Stichwortverzeichnis}
-\printindex
-%---------------------------------------------------------------------------
-
-% Attachment:
-%---------------------------------------------------------------------------
-\appendix
-\settocdepth{section}
-\include{anhang/beispielanhang}
-\include{anhang/beispielanhangB}
-\include{anhang/inhaltCDROM}
-%---------------------------------------------------------------------------
-
-%---------------------------------------------------------------------------
-\end{document}
+\settocdepth{section}														% Set depth of toc
+\pagenumbering{roman}														
 

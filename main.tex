@@ -1,0 +1,114 @@
+%
+% Main document
+% ===========================================================================
+% This is part of the document "Project documentation template".
+% Authors: brd3, kaa1
+%
+
+%---------------------------------------------------------------------------
+\documentclass{bfh_template}
+
+%---------------------------------------------------------------------------
+%  Titel,Versionsnummer und -datum der Arbeit aus Dateien titel.tex / version.tex lesen
+\input{vorspann/titel}					
+\input{vorspann/version}
+%---------------------------------------------------------------------------
+
+\begin{document}                              	% Start Document
+
+%---------------------------------------------------------------------------
+% Intro:
+%---------------------------------------------------------------------------
+
+
+% Title Page and Abstract
+%---------------------------------------------------------------------------
+%\include{vorspann/titelseite_ohne_bild}		% activate for Titelseite ohne Bild
+\include{vorspann/titelseite_mit_bild}			% activate for Titelseite mit Bild
+\include{vorspann/versionen}
+
+\cleardoubleemptypage
+\setcounter{page}{1}
+
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Management Summary}
+\include{vorspann/management_summary}
+\cleardoubleemptypage
+%---------------------------------------------------------------------------
+
+% Table of contents
+%---------------------------------------------------------------------------
+\tableofcontents
+%---------------------------------------------------------------------------
+
+% Main part:
+%---------------------------------------------------------------------------
+\cleardoublepage
+\pagenumbering{arabic}
+
+\include{kapitel/einleitung}
+\include{kapitel/anleitungen}
+\include{kapitel/satzspiegeltest}
+\include{kapitel/schlussfolgerungen}
+%---------------------------------------------------------------------------
+
+% Selbständigkeitserklärung
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Selbständigkeitserklärung}
+\include{vorspann/selbstaendigkeitserklaerung}
+%---------------------------------------------------------------------------
+
+% Glossary
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Glossar}
+\renewcommand{\glossaryname}{Glossar}
+\printglossary
+%---------------------------------------------------------------------------
+
+% Bibliography
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\bibliographystyle{IEEEtranS}
+\bibliography{datenbanken/bibliography}{}
+%---------------------------------------------------------------------------
+
+% Listings
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+%---------------------------------------------------------------------------
+
+% Index
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\printindex
+%---------------------------------------------------------------------------
+
+% Attachment:
+%---------------------------------------------------------------------------
+\appendix
+\settocdepth{section}
+\include{anhang/beispielanhang}
+\include{anhang/beispielanhangB}
+\include{anhang/inhaltCDROM}
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+\end{document}
