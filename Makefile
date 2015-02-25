@@ -9,7 +9,7 @@ markdown:
 	echo $$file; \
 		dir=$$(dirname "$$file"); \
 		filename=$$(basename "$$file" .md); \
-		pandoc "$$file" --chapters --latex-engine=xelatex --parse-raw --smart  --to=latex+raw_tex  -o "$$dir/$$filename.tex"; \
+		pandoc "$$file"  --biblatex  -f markdown+implicit_figures+inline_notes --chapters --latex-engine=xelatex --parse-raw --smart  --to=latex+raw_tex  -o "$$dir/$$filename.md.tex"; \
 	done
 
 glossar: run-1 
@@ -35,7 +35,7 @@ test: clean-all main.pdf
 	diff tests/main.pdf.expected.txt main.txt && echo "Tests: OK"
 	
 clean: 
-	-rm -f *.{aux,bak}
+	-rm -f *.{aux,bak,md.tex}
 	-rm -f */*.{aux,bak}
 	-rm -f main.{txt,dvi,bbl,blg,glo,idx,ist,lof,lot,log,out,synctex.gz,toc,glg,gls}
 	

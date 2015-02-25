@@ -146,3 +146,4 @@
 \settocdepth{section}														% Set depth of toc
 \pagenumbering{roman}														
 
+\newcommand{\autocite}{\cite}
