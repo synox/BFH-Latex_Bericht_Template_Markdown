@@ -1,0 +1,91 @@
+%
+% Project documentation template
+% ===========================================================================
+% This is part of the document "Project documentation template".
+% Authors: brd3, kaa1
+%
+
+\begin{titlepage}
+
+
+% BFH-Logo absolute placed at (28,12) on A4 and picture (16:9 or 15cm x 8.5cm)
+% Actually not a realy satisfactory solution but working.
+%---------------------------------------------------------------------------
+\setlength{\unitlength}{1mm}
+\begin{textblock}{20}[0,0](28,12)
+	\includegraphics[scale=1.0]{bilder/BFH_Logo_B.png}
+\end{textblock}
+
+\begin{textblock}{154}(28,48)
+	\begin{picture}(150,2)
+		\put(0,0){\color{bfhgrey}\rule{150mm}{2mm}}
+	\end{picture}
+\end{textblock}
+
+\begin{textblock}{154}[0,0](28,50)
+	\includegraphics[scale=1.0]{bilder/platzhalter.jpg}			% Titelbild definieren
+\end{textblock}
+
+\begin{textblock}{154}(28,135)
+	\begin{picture}(150,2)
+		\put(0,0){\color{bfhgrey}\rule{150mm}{2mm}}
+	\end{picture}
+\end{textblock}
+\color{black}
+
+% Institution / Titel / Untertitel / Autoren / Experten:
+%---------------------------------------------------------------------------
+\begin{flushleft}
+
+\vspace*{115mm}
+
+\fontsize{26pt}{28pt}\selectfont 
+\titel 				\\							% Titel aus der Datei vorspann/titel.tex lesen
+\vspace{2mm}
+
+\fontsize{16pt}{20pt}\selectfont\vspace{0.3em}
+Hier steht ein Untertitel 			\\							% Untertitel eingeben
+\vspace{5mm}
+
+\fontsize{10pt}{12pt}\selectfont
+\textbf{Art der Arbeit (Semesterarbeit / Bachelorthesis / etc.)} \\									% eingeben
+\vspace{3mm}
+
+% Abstract (eingeben):
+%---------------------------------------------------------------------------
+\begin{textblock}{150}(28,190)
+\fontsize{10pt}{12pt}\selectfont
+[Kurztext (Abstract) einfügen, falls gewünscht] \\ 
+Dieses Dokument dient als Vorlage für die Erstellung von Berichten nach den Richtlinien der BFH. Die Vorlage ist in \LaTeX{} erstellt und unterstützt das automatische Erstellen von diversen Verzeichnissen, Literaturangaben, Indexierung und Glossaren. Dieser kleine Text ist eine Zusammenfassung über das vorliegenden Dokument mit einer Länge von 4 bis max. 8 Zeilen. \\
+Das Titelbild kann in den Zeilen 157/158 der Datei template.tex ein- oder ausgeschaltet werden.
+\end{textblock}
+
+\begin{textblock}{150}(28,225)
+\fontsize{10pt}{17pt}\selectfont
+\begin{tabbing}
+xxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+Studiengang:	\> [z.B.Elektro- und Kommunikationstechnik]	\\			% Namen eingeben
+Autoren:		\> [Test Peter, Müster Rösä]		\\					% Namen eingeben
+Betreuer:	\> [Dr.~Xxxx Xxxx, Dr.~Yyyy Yyyy]		\\					% Namen eingeben
+Auftraggeber:	\> [Wwwww AG]						\\					% Namen eingeben
+Experten:		\> [Dr.~Zzzz Zzzz]				\\					% Namen eingeben
+Datum:			\> \versiondate					\\		% aus Datei vorspann/version.tex lesen
+\end{tabbing}
+
+\end{textblock}
+\end{flushleft}
+
+\begin{textblock}{150}(28,280)
+\noindent 
+\color{bfhgrey}\fontsize{9pt}{10pt}\selectfont
+Berner Fachhochschule | Haute école spécialisée bernoise | Bern University of Applied Sciences
+\color{black}\selectfont
+\end{textblock}
+
+
+\end{titlepage}
+
+%
+% ===========================================================================
+% EOF
+%
