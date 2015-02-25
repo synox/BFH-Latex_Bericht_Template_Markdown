@@ -1,0 +1,418 @@
+
+
+[Kurztext (Abstract) einf"ugen, falls gew"unscht]
+Dieses Dokument dient als Vorlage f"ur die Erstellung von Berichten nach den Richtlinien der BFH. Die
+Vorlage ist in LATEX erstellt und unterst"utzt das automatische Erstellen von diversen Verzeichnissen,
+Literaturangaben, Indexierung und Glossaren. Dieser kleine Text ist eine Zusammenfassung "uber das
+vorliegenden Dokument mit einer L"ange von 4 bis max. 8 Zeilen.
+Das Titelbild kann in den Zeilen 157/158 der Datei template.tex ein- oder ausgeschaltet werden.
+
+Studiengang: [z.B.Elektro- und Kommunikationstechnik]
+Autoren: [Test Peter, M"uster R"os"a]
+Betreuer: [Dr. Xxxx Xxxx, Dr. Yyyy Yyyy]
+Auftraggeber: [Wwwww AG]
+Experten: [Dr. Zzzz Zzzz]
+Datum: 01.02.2014
+
+Berner Fachhochschule | Haute 'ecole sp'ecialis'ee bernoise | Bern University of Applied Sciences
+
+Titel des Berichts
+Hier steht ein Untertitel
+Art der Arbeit (Semesterarbeit / Bachelorthesis / etc.)
+
+Versionen
+
+Version Datum Status Bemerkungen
+0.1 01.08.2013 Entwurf Lorem ipsum dolor sit amet
+0.2 21.08.2013 Entwurf Phasellus scelerisque
+0.3 02.09.2013 Entwurf Donec eget aliquam urna. Lorem ipsum dolor sit amet
+1.0 12.09.2013 Definitiv Lorem ipsum dolor sit ametPhasellus scelerisque, leo sed iaculis ornare
+1.1 04.11.2013 Korrektur Layout angepasst
+1.2 01.02.2014 Erg"anzung Kapitel 1.1 erweitert
+
+Management Summary
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, leo sed iaculis ornare, mi leo semper
+urna, ac elementum libero est at risus. Donec eget aliquam urna. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit. Nunc fermentum nunc sollicitudin leo porttitor volutpat. Duis ac enim lectus, quis malesuada lectus. Aenean
+vestibulum suscipit justo, in suscipit augue venenatis a. Donec interdum nibh ligula. Aliquam vitae dui a odio cursus
+interdum quis vitae mi. Phasellus ornare tortor fringilla velit accumsan quis tincidunt magna eleifend. Praesent nisl
+nibh, cursus in mattis ac, ultrices ac nulla. Nulla ante urna, aliquet eu tempus ut, feugiat id nisl. Nunc sit amet
+mauris vitae turpis scelerisque mattis et sed metus. Aliquam interdum congue odio, sed semper elit ullamcorper
+vitae. Morbi orci elit, feugiat vel hendrerit nec, sollicitudin non massa. Quisque lacus metus, vulputate id ullamcorper
+id, consequat eget orci .
+
+Titel des Berichts, Version 1.2, 01.02.2014 i
+
+Inhaltsverzeichnis
+Management Summary i
+1. Einleitung 1
+
+1.1. Dokumentaufbau . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2. Kontakt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.3. Verbesserungsvorschl"age . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+2. Anleitungen 3
+
+2.1. Stichwortverzeichnisse . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.2. Glossar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.3. Bibliographie . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+3. Satzspiegeltest 7
+
+3.1. Der grosse Oxmox . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.2. Typoblindtext . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.3. Webstandards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+4. Markdown 9
+
+4.1. Formatierung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+5. Schlussfolgerungen/Fazit 11
+Selbst"andigkeitserkl"arung 13
+Glossar 15
+Literaturverzeichnis 17
+Abbildungsverzeichnis 19
+Tabellenverzeichnis 21
+A. Beliebiger Anhang 23
+Stichwortverzeichnis 23
+B. Weiterer Anhang 25
+
+B.1. Test 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+
+C. Inhalt der CD-ROM 27
+
+Titel des Berichts, Version 1.2, 01.02.2014 iiiiv Titel des Berichts, Version 1.2, 01.02.2014
+
+1. Einleitung
+Dieses Dokument dient einerseites zur Illustration der LATEX Vorlage anhand des Corporate Designs der Berner
+Fachhochschule und andererseits als Anleitung f"ur deren Verwendung. Dabei wird vorausgesetzt, dass der Benutzer
+bereits Erfahrungen mit LATEX besitzt oder gewillt ist, sich w"ahrend der Benutzung in das Thema einzuarbeiten.
+Im Quellenverzeichnis sind einige n"utzliche Eintr"age zu diversen B"uchern und Dokumenten im Internet "uber LATEX
+zu finden.
+
+1.1. Dokumentaufbau
+Das vorliegende Dokument ist so aufgebaut wie die Dokumentation einer Projektarbeit oder Thesis. Im Kapitel
+2 werden die verwendeten Pakete kurz erkl"art und Hinweise gegeben, wie die Bibliographie und das Glossar zu
+verwenden sind. Kapitel 3 stellt ein reines Beispielkapitel dar, um den Satzspiegel zu pr"ufen.
+
+In Abbildung 1.1 ist die Dateistruktur dieses Template dargestellt.
+
+Abbildung 1.1.: Dateistruktur
+Titel des Berichts, Version 1.2, 01.02.2014 1
+
+1.2. Kontakt
+Die Hersteller dieser Vorlage sind nat"urlich froh um Verbesserungsvorschl"age jeder Art. Kapitel 1.3 enth"alt m"ogliche
+Verbesserungsvorschl"age.
+
+Vorname Name E-Mail Funktion
+Alfred Kaufmann alfred.kaufmann@bfh.ch Auftraggeber, Projektleitung, Erg"anzungen
+Fritz Dellsperger in Pension Tipps zur Struktur und Layout
+David Burri ausgetreten Erstellung der Vorlage
+
+Tabelle 1.1.: Kontaktpersonen
+
+1.3. Verbesserungsvorschl"age
+
+* Erstellen eines eigenen BFH Style-Files
+
+* Vorlage f"ur die Pr"asentationserstellung mit LATEX
+
+2 Titel des Berichts, Version 1.2, 01.02.2014
+
+2. Anleitungen
+Die nachfolgende Tabelle zeigt einige der wichtigsten Pakete, die in der LATEX Vorlage verwendet werden.
+
+Paket Funktion
+cmbright Serifenlose Schriftart 'Computer Modern Bright' welche die Textcodierungen OT1, T1
+
+und TS1 unterst"utzt, sowie die mathematischen Zeichen wie auch die AMS Symbole
+
+ae Sorgt f"ur besser aufgel"oste Schriften in PDF Dateien
+fancyhdr Einfache Anpassung der Kopf- und Fusszeilen
+graphicx Einbindung von Grafiken in LATEX dokumente
+booktabs Sch"onere Darstellung von Tabellen
+textpos Vereinfachte absolute Positionierung von Boxen auf der Seite
+hyperref Paket zum Erstellen von Links in PDF Dateien
+geometry Vereinfachte und verbesserte Anpassung des Standard-Satzspiegels
+makeidx Einfache Indexerstellung (siehe Kapitel 2.1)
+glossaries Erstellen von Glossaren (siehe Kapitel 2.2)
+
+Tabelle 2.1.: Pakete
+
+2.1. Stichwortverzeichnisse
+LATEX ist in der Grundausstattung nicht f"ahig ein Stichwortverzeichnis zu erstellen. Diese k"onnen in LATEX mit
+dem makeidx Paket und dem makeindex Programm erstellt werden. Die folgende Seite enth"alt eine ausf"uhrliche
+Erkl"arung wie das Paket funktioniert und dessen Anwendung:
+
+http://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_makeindex
+Grob zusammengefasst sind f"ur ein Stichwortverzeichnis folgenden Punkte n"otig:
+
+* Einbinden des Paketes makeidx
+
+* Durch den \makeindex Befehl die Erstellung initialisieren
+
+* Im Text laufend W"orter indexieren mit dem Befehl \index{}
+
+* Beim ersten Durchlauf der Dokumenterstellung wird das Verzeichnis erstellt und die mit \index{} markierten
+
+Begriffe in der .idx-Datei gespeichert
+
+* Beim zweiten Durchlauf wird die .idx-Datei sortiert, formatiert und als .ind-Datei abgespeichert, wobei
+
+LATEX nun die .ind-Datei in das Dokument einf"ugt
+
+Titel des Berichts, Version 1.2, 01.02.2014 3
+
+2.2. Glossar
+Ein Glossar kann in LATEX ebenfalls mit dem makeindex Programm und dem glossaries Paket erstellt werden.
+Die folgende Auflistung zeigt das Vorgehen um ein Glossar zu erzeugen:
+
+* Einbinden des glossaries Pakets
+
+* Falls es als sinnvoll erachtet wird, kann eine eigene Datenbank mit Glossareintr"agen erstellt werden. In dieser
+
+Vorlage wird mit einer solchen Datenbank gearbeitet, welche im Ordner datenbanken abgelegt ist. Eintr"age
+aus der Datenbank werden nur in das Verzeichnis geschrieben, falls das Wort im Text auch wirklich vermerkt
+ist.
+
+* Durch den \makeglossaries Befehl wird die Erstellung initialisiert
+
+* Neue Eintr"age k"onnen mit dem Befehl
+
+\newglossaryentry{<ABK"URZUNG>}{name={<NAME>},description={<BESCHRIEB>}}
+erstellt werden
+
+* Im Text laufend W"orter referenzieren mit dem Befehl \gls{<ABK"URZUNG>}
+
+* "Ahnlich wie bei der Erstellung des Index, wird das Verzeichnis erst beim zweiten Durchlauf in das Dokument
+
+eingebunden
+
+Damit das Ganze "uberhaupt funktioniert, muss als Nachbearbeitung des Dokuments das Glossar mit makeindex
+erstellt werden. Dazu ist folgender Code in der Kommandozeile auszuf"uhren:
+
+makeindex -s template.ist -t template.glg -o template.gls template.glo
+Bei den meisten LATEX-Editoren kann dies als Nachbearbeitungsschritt angegeben werden. Die nachfolgende Erkl"arung ist f"ur das Programm TeXnicCenter. Unter dem Menupunkt "Ausgabe" -> "Ausgabeprofile definieren" (kurz:
+alt + F7) ist unter dem Register "Nachbearbeitung" das in Bild 2.1 dargestellte Fenster zu finden. Anschliessend gilt
+es, einen neuen Eintrag einzuf"ugen, wobei eine Anwendung wie auch ein Argument anzugeben ist. Die Anwendung
+ist in der MiKTeX Installation zu finden (..\MiKTeX X.X\miktex\bin\makeindex.exe). Als Argument ist die
+folgende Zeile eizutragen:
+
+-s "%tm.ist" -t "%tm.glg" -o "%tm.gls" "%tm.glo"
+
+4 Titel des Berichts, Version 1.2, 01.02.2014
+
+Abbildung 2.1.: Nachbearbeitung
+2.3. Bibliographie
+Zur Erstellung einer Bibliographie wird auf BibTeX zur"uckgegriffen. Im Ordner datenbanken befindet sich eine
+.bib-Datei mit diversen Datenbankeintr"agen. Wie diese Eintr"age zu erstellen sind, kann aus diversen Quellen im
+Internet oder in B"uchern entnommen werden. Die Eintr"age in der Datenbank werden nur dann in das Verzeichnis
+des Dokuments geschrieben, wenn die Quelle auch wirklich im Text zitiert wurde.
+
+Unter den folgenden Adressen sind weitere Erl"auterungen zum Erstellen der Datenbank und deren Verwendung zu
+finden:
+
+* http://en.wikipedia.org/wiki/BibTeX
+
+* http://www.bibtex.org/de/
+
+Titel des Berichts, Version 1.2, 01.02.2014 56 Titel des Berichts, Version 1.2, 01.02.2014
+
+3. Satzspiegeltest
+Weit hinten, hinter den Wortbergen, fern der L"ander Vokalien und Konsonantien leben die Blindtexte. Abgeschieden
+wohnen Sie in Buchstabhausen an der K"uste des Semantik, eines grossen Sprachozeans. Ein kleines B"achlein namens
+Duden fliesst durch ihren Ort und versorgt sie mit den n"otigen Regelialien. Es ist ein paradiesmatisches Land, in
+dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allm"achtigen Interpunktion werden
+die Blindtexte beherrscht - ein geradezu unorthographisches Leben. Eines Tages aber beschloss eine kleine Zeile
+Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in die weite Grammatik.
+
+3.1. Der grosse Oxmox
+Der grosse Oxmox riet ihr davon ab, da es dort wimmele von b"osen Kommata, wilden Fragezeichen und hinterh"altigen
+Semikoli, doch das Blindtextchen liess sich nicht beirren. Es packte seine sieben Versalien, schob sich sein Initial
+in den G"urtel und machte sich auf den Weg. Als es die ersten H"ugel des Kursivgebirges erklommen hatte, warf es
+einen letzten Blick zur"uck auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und
+die Subline seiner eigenen Strasse, der Zeilengasse. Wehm"utig lief ihm eine rethorische Frage "uber die Wange, dann
+setzte es seinen Weg fort. Unterwegs traf es eine Copy.
+
+N (x | u, \Sigma ) = 1(2ss)D/2 1|\Sigma |(1/2) exp `- 12 (x - u)T \Sigma -1(x - u)' (3.1)
+Die Copy warnte das Blindtextchen, da, wo sie herk"ame w"are sie zigmal umgeschrieben worden und alles, was
+von ihrem Ursprung noch "ubrig w"are, sei das Wort "und"und das Blindtextchen solle umkehren und wieder in sein
+eigenes, sicheres Land zur"uckkehren. Doch alles Gutzureden konnte es nicht "uberzeugen und so dauerte es nicht
+lange, bis ihm ein paar heimt"uckische Werbetexter auflauerten, es mit Longe und Parole betrunken machten und
+es dann in ihre Agentur schleppten, wo sie es f"ur ihre Projekte wieder und wieder missbrauchten. Und wenn es nicht
+umgeschrieben wurde, dann benutzen Sie es immernoch.
+
+3.2. Typoblindtext
+Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal
+benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal S"atze,
+die alle Buchstaben des Alphabets enthalten - man nennt diese S"atze "Pangrams".
+
+Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
+fremdsprachige Satzteile eingebaut (AVAIL(R) and Wefox(TM) are testing aussi la Kerning), um die Wirkung in anderen
+Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+
+3.2.1. Demonstrandum
+Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204$
+
+ab dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245#oder 368$
+bestraft. Genauso wichtig in sind mittlerweile auch ^A,cc`e~nt"e, die in neueren Schriften aber fast immer enthalten
+sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalit"aten. Je nach Software und
+Voreinstellungen k"onnen eingebaute Kapit"alchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt
+werden.
+
+Titel des Berichts, Version 1.2, 01.02.2014 7
+
+Subsubsection
+Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal
+benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal S"atze,
+die alle Buchstaben des Alphabets enthalten - man nennt diese S"atze "Pangrams".
+
+Subsubsection
+Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog. Oft werden in Typoblindtexte auch
+fremdsprachige Satzteile eingebaut (AVAIL(R) and Wefox(TM) are testing aussi la Kerning), um die Wirkung in anderen
+Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum.
+
+3.3. Webstandards
+
+"Uberall dieselbe alte Leier. Das Layout ist fertig, der Text l"asst auf sich warten. Damit das Layout nun nicht nackt im
+Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen,
+immer im Schatten meines grossen Bruders "Lorem Ipsum", freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen.
+Denn esse est percipi - Sein ist wahrgenommen werden.
+
+Und weil Sie nun schon die G"ute haben, mich ein paar weitere S"atze lang zu begleiten, m"ochte ich diese Gelegenheit
+nutzen, Ihnen nicht nur als L"uckenf"uller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards n"amlich. Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten
+aufbauen. So gibt es Regeln f"ur HTML, CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von
+Ihrem Entwickler geh"ort haben. Diese Standards sorgen daf"ur, dass alle Beteiligten aus einer Webseite den gr"ossten
+Nutzen ziehen.
+
+Abbildung 3.1.: Normalverteilung
+Im Gegensatz zu fr"uheren Webseiten m"ussen wir zum Beispiel nicht mehr zwei verschiedene Webseiten f"ur den
+Internet Explorer und einen anderen Browser programmieren. Es reicht eine Seite, die - richtig angelegt - sowohl
+auf verschiedenen Browsern im Netz funktioniert, aber ebenso gut f"ur den Ausdruck oder die Darstellung auf einem
+Handy geeignet ist. Wohlgemerkt: Eine Seite f"ur alle Formate. Was f"ur eine Erleichterung. Standards sparen Zeit
+bei den Entwicklungskosten und sorgen daf"ur, dass sich Webseiten sp"ater leichter pflegen lassen. Nat"urlich nur
+dann, wenn sich alle an diese Standards halten.
+
+8 Titel des Berichts, Version 1.2, 01.02.2014
+
+4. Markdown
+Es k"onnen auch Teile des Berichts in Markdown geschrieben werden, diese werden mit Pandoc automatisch in Latex
+umgewandelt. Es k"onnen Latex-Befehle im Markdown-Text verwendet werden, diese werden nicht ver"andert.
+
+4.1. Formatierung
+Mann kann Fett oder kursiv verwenden. Verweise zu anderen Kapiteln sind m"oglich, z.B. Kapitel 2.
+
+Titel des Berichts, Version 1.2, 01.02.2014 910 Titel des Berichts, Version 1.2, 01.02.2014
+
+5. Schlussfolgerungen/Fazit
+Tr"ostlicheres. Tod Baus treuh"anderischem Feldern ade war Wetten peu exaltiert, sondern just wiegen Welchen seh
+Egels all Eis Namur wutentbranntes Aas. Creme hob Herklit abnimmt ruh eben Auto Tr"uffels dept Storchs tr"ugten
+Axt Alarmen Malereien Acker gar Puder Bea wohlmeinendere ba"u Autovermietung Pistole, Bern edel tanze Ergusses
+bin kam defektes, Gag wedle Franziska Ehe ja unsriger hob gabt. Fells "uberregionalen Eklat droht Dr spe Barden
+Boy gib Frl Sonette. Tito fesseln sich ade Big eng Julis lobe Gas auf F"arberei folgen Extension Brandmal stillte
+C. Wartens half Box umgehauter umworbenes Bruchst"ucken, tov Ehe Pokals geh tapsige, segnete sag Eink"aufe
+wer Aas weh einzahlendes H"ugeln. Heft abschn"urend Bandit dm dies l"ugen tankte hat.Abeter teilt geize Bzw turne
+mystisch G"othes Dorfes, Cha Beo Deuterium Allergien Bar von gekrochen ahndest. Art falls gehe Gef"ass ortest
+fair, ade adlige klarste was tolle Ada Obmann, gen C. Klausel nage allm"achtig. Zweitem. Sattle Gebote Droht B"oe
+F"achers.
+
+Titel des Berichts, Version 1.2, 01.02.2014 11
+
+Welchen seh Egels all Eis Namur wutentbranntes Aas. Creme hob Herklit abnimmt ruh eben Auto Tr"uffels dept
+Storchs tr"ugten Axt Alarmen Malereien Acker gar Puder Bea wohlmeinendere ba"u Autovermietung Pistole, Bern
+edel tanze Ergusses bin kam defektes, Gag wedle Franziska Ehe ja unsriger hob gabt. Fells "uberregionalen Eklat
+droht Dr spe Barden Boy gib Frl Sonette. Tito fesseln sich ade Big eng Julis lobe Gas auf F"arberei folgen Extension
+Brandmal stillte C. Wartens half Box umgehauter umworbenes Bruchst"ucken, tov Ehe Pokals geh tapsige, segnete
+sag Eink"aufe wer Aas weh einzahlendes H"ugeln. Heft abschn"urend Bandit dm dies l"ugen tankte hat.Abeter teilt
+geize Bzw turne mystisch G"othes Dorfes, Cha Beo Deuterium Allergien Bar von gekrochen ahndest. Art falls gehe
+Gef"ass ortest fair, ade adlige klarste was tolle Ada Obmann, gen C. Klausel nage allm"achtig.
+
+12 Titel des Berichts, Version 1.2, 01.02.2014
+
+Selbst"andigkeitserkl"arung
+Ich/wir best"atige/n, dass ich/wir die vorliegende Arbeit selbstst"andig und ohne Benutzung anderer als der im
+Literaturverzeichnis angegebenen Quellen und Hilfsmittel angefertigt habe/n. S"amtliche Textstellen, die nicht von
+mir/uns stammen, sind als Zitate gekennzeichnet und mit dem genauen Hinweis auf ihre Herkunft versehen.
+
+Ort, Datum: [Biel/Burgdorf], 01.02.2014
+Namen Vornamen: [Test Peter] [M"uster R"os"a]
+
+Unterschriften: ...................................... ......................................
+
+Titel des Berichts, Version 1.2, 01.02.2014 1314 Titel des Berichts, Version 1.2, 01.02.2014
+
+Glossar
+BibTeX Programm zur Erstellung von Literaturangaben und -verzeichnissen in TEX- oder LATEX-Dokumenten.
+Stichwortverzeichnis Verzeichnis mit Stichworten aus dem Text.
+
+Titel des Berichts, Version 1.2, 01.02.2014 1516 Titel des Berichts, Version 1.2, 01.02.2014
+
+Literaturverzeichnis
+[1] T. Erbsland and A. Nitsch,"Diplomarbeit mit LaTeX,"2008. [Online]. Available: http://drzoom.ch/project/dml/
+[2] M. J"urgens, "Latex - Fortgeschrittene Anwendungen," 1995. [Online]. Available: http://www.fernuni-hagen.
+
+de/zmi/katalog/A027.shtml
+
+[3] ----, "Latex - eine Einf"uhrung und ein bisschen mehr..." 2000. [Online]. Available: http://www.fernuni-hagen.
+
+de/zmi/katalog/A026.shtml
+
+[4] "KOMAScript documentation project." [Online]. Available: http://koma-script.net.tf
+[5] H. Kopka, LATEX, Band 1: Eine Einf"uhrung. Pearson Studium, 2002, vol. 3.
+[6] F. Marti, "Schreiben "uber Technik - Redaktion und Gestaltung von technischen Berichten und anderen technikbezogenen Texten," Berner Fachhochschule, 2006.
+
+[7] B. Raichle, "Einf"uhrung in die BibTeX-Programmierung," 2002. [Online]. Available: http://www.dante.de/
+
+dante/events/dante2002/handouts/raichle-bibtexprog.pdf
+
+[8] C. Schenk, "MiKTeX Project Page." [Online]. Available: http://www.miktex.org/
+[9] S. Wiegand, "TeXnicCenter." [Online]. Available: http://www.TeXnicCenter.org/
+
+Titel des Berichts, Version 1.2, 01.02.2014 1718 Titel des Berichts, Version 1.2, 01.02.2014
+
+Abbildungsverzeichnis
+
+1.1. Dateistruktur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+2.1. Nachbearbeitung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.1. Normalverteilung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+Titel des Berichts, Version 1.2, 01.02.2014 1920 Titel des Berichts, Version 1.2, 01.02.2014
+
+Tabellenverzeichnis
+
+1.1. Kontaktpersonen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2.1. Pakete . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+Titel des Berichts, Version 1.2, 01.02.2014 2122 Titel des Berichts, Version 1.2, 01.02.2014
+
+A. Beliebiger Anhang
+Phasellus eget velit massa, sed faucibus nisi. Etiam tincidunt libero viverra lorem bibendum ut rutrum nisi volutpat.
+Donec non quam vitae lacus egestas suscipit at eu nisi. Maecenas non orci risus, at egestas tellus. Vivamus quis
+est pretium mauris fermentum consectetur. Cras non dolor vitae nulla molestie facilisis. Aliquam euismod nisl eget
+risus pretium non suscipit nulla feugiat. Nam in tortor sapien. Nam lectus nibh, laoreet eu ultrices nec, consequat
+nec sem. Nulla leo turpis, suscipit in vulputate a, dapibus molestie quam. Vestibulum pretium, purus sed suscipit
+tempus, turpis purus fermentum diam, id cursus enim mi a tortor. Proin imperdiet varius pellentesque. Nam congue,
+enim sit amet iaculis venenatis, dui neque ornare purus, laoreet porttitor nunc justo vel velit. Suspendisse potenti.
+Nulla facilisi.
+
+Titel des Berichts, Version 1.2, 01.02.2014 2324 Titel des Berichts, Version 1.2, 01.02.2014
+
+B. Weiterer Anhang
+B.1. Test 1
+Phasellus eget velit massa, sed faucibus nisi. Etiam tincidunt libero viverra lorem bibendum ut rutrum nisi volutpat.
+Donec non quam vitae lacus egestas suscipit at eu nisi. Maecenas non orci risus, at egestas tellus. Vivamus quis
+est pretium mauris fermentum consectetur. Cras non dolor vitae nulla molestie facilisis. Aliquam euismod nisl eget
+risus pretium non suscipit nulla feugiat. Nam in tortor sapien.
+
+B.1.1. Umfeld
+Nam lectus nibh, laoreet eu ultrices nec, consequat nec sem. Nulla leo turpis, suscipit in vulputate a, dapibus
+molestie quam. Vestibulum pretium, purus sed suscipit tempus, turpis purus fermentum diam, id cursus enim mi a
+tortor. Proin imperdiet varius pellentesque. Nam congue, enim sit amet iaculis venenatis, dui neque ornare purus,
+laoreet porttitor nunc justo vel velit. Suspendisse potenti. Nulla facilisi.
+
+Titel des Berichts, Version 1.2, 01.02.2014 2526 Titel des Berichts, Version 1.2, 01.02.2014
+
+C. Inhalt der CD-ROM
+Inhaltsverzeichnis der beiliegenden CD-ROM, ev. Verzeichnisbaum, etc.
+
+Titel des Berichts, Version 1.2, 01.02.2014 27
