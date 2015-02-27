@@ -1,6 +1,8 @@
 RUBBER_OPTIONS=--module bibtex --module index --module makeidx --module glossaries
 
-pdf: markdown
+pdf: markdown rubber 
+	
+rubber:
 	-rm -f main.pdf
 	rubber --pdf 	 $(RUBBER_OPTIONS)  main.tex
 	rubber --clean $(RUBBER_OPTIONS)  main.tex
