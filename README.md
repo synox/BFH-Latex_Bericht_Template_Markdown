@@ -53,5 +53,5 @@ Developer Notes
 Notes to developers / forkers:  
 
  * Zitate wie [@juergens:einfuehrung] werden mit \autocite{} umgesetzt. Die von BFH verwendeten Packages kennen den Befehl nicht. Damit es trotzdem funktioniert  gibt es im `bfh_template.cls` ein Alias dafür. 
- * Es wird ein der [Fork](https://github.com/sre/rubber) von [Rubber](https://launchpad.net/rubber/) verwendet, es es das Modul `glossaries` anbietet.
+ * Es wird ein der [Fork](https://github.com/sre/rubber) von [Rubber](https://launchpad.net/rubber/) verwendet, weil es das Modul `glossaries` anbietet.
     
