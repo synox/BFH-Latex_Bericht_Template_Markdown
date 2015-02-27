@@ -1,25 +1,27 @@
-rubber: 
-	rm main.pdf
-	rubber --module bibtex --module index --module makeidx --module nomencl --pdf main.tex
+RUBBER_OPTIONS=--module bibtex --module index --module makeidx --module glossaries
 
-
-
-all: main.pdf
-	@echo "done"
-
-main.pdf: clean markdown run-1 bibtex glossar run-2 run-3
-
-preview: markdown run-1
-	open main.pdf
+pdf: markdown
+	-rm -f main.pdf
+	rubber --pdf 	 $(RUBBER_OPTIONS)  main.tex
+	rubber --clean $(RUBBER_OPTIONS)  main.tex
 
 markdown: 
-	@# convert markdown files to latex
-	@find . -type f -name "*.md"  -print0 | while IFS= read -r -d '' file; do \
-	echo $$file; \
-		dir=$$(dirname "$$file"); \
-		filename=$$(basename "$$file" .md); \
-		pandoc "$$file"  --biblatex  -f markdown+implicit_figures+inline_notes --chapters --latex-engine=xelatex --parse-raw --smart  --to=latex+raw_tex  -o "$$dir/$$filename.md.tex"; \
-	done
+		@# convert markdown files to latex
+		@find . -type f -name "*.md"  -print0 | while IFS= read -r -d '' file; do \
+		echo $$file; \
+			dir=$$(dirname "$$file"); \
+			filename=$$(basename "$$file" .md); \
+			pandoc "$$file"  --biblatex  -f markdown+implicit_figures+inline_notes \
+					--chapters --latex-engine=xelatex --parse-raw --smart  \
+					--to=latex+raw_tex  -o "$$dir/$$filename.md.tex"; \
+		done
+		
+test: 
+		ps2ascii main.pdf > main.txt
+		diff tests/main.pdf.expected.txt main.txt && echo "Tests: OK"
+
+# -------------- old but maybe stable actions -------------
+fallback: clean markdown run-1 bibtex glossar run-2 run-3
 
 glossar: run-1 
 	makeindex -s main.ist -t main.glg -o main.gls main.glo
@@ -36,17 +38,7 @@ run-1 run-2 run-3:
 		pdflatex -interaction=nonstopmode main.tex; \
 	)
 
-open: main.pdf
-	open main.pdf
-
-test: clean-all main.pdf
-	ps2ascii main.pdf > main.txt
-	diff tests/main.pdf.expected.txt main.txt && echo "Tests: OK"
-	
 clean: 
 	-rm -f *.{aux,bak,md.tex}
 	-rm -f */*.{aux,bak}
-	-rm -f main.{txt,dvi,bbl,blg,glo,idx,ist,lof,lot,log,out,synctex.gz,toc,glg,gls}
-	
-clean-all: clean
-	-rm -f main.pdf
+	-rm -f main.{ilg,ind,txt,dvi,bbl,blg,glo,idx,ist,lof,lot,log,out,synctex.gz,toc,glg,gls}
