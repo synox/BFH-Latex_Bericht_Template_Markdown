@@ -30,4 +30,13 @@ Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen.
  
  `make clean` entfernt temporäre Dateien des Latex-Prozesses. 
  
+ # Developer Notes
  
+ Bei der Verwendung von Pandoc gibt es zurzeit ein paar Einschränkungen: 
+ 
+ * Zitate wie [@juergens:einfuehrung] werden mit \autocite{} umgesetzt. Die verwendeten Packages kennen den Befehl nicht, daher gibt es im `bfh_template.cls` ein Alias dafür. 
+
+
+   
+   https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
+   /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf

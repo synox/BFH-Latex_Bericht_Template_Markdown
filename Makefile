@@ -1,3 +1,9 @@
+rubber: 
+	rm main.pdf
+	rubber --module bibtex --module index --module makeidx --module nomencl --pdf main.tex
+
+
+
 all: main.pdf
 	@echo "done"
 
