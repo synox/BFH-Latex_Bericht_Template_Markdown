@@ -6,7 +6,7 @@ Dieses Template ist eine Variante des BFH-Latex-Template vom BFH-Intranet. Zusä
  - Verwendung von Markdown-Syntax
  - Einfaches Makefile
  
- Nicht benötigte Teile können im `main.tex` einfach entfernt werden. Zur Verwendung der Tools und von Latex siehe das original Template. In diesem Template werden die Markdown-Spezialitäten erklärt. 
+Nicht benötigte Teile können im `main.tex` einfach entfernt werden. Zur Verwendung der Tools und von Latex siehe das original Template. In diesem Template werden die Markdown-Spezialitäten erklärt. 
  
 In Markdown ist die Verwendung von Latex weiterhin möglich. Es können also die Vorteile beider Tools verwendet werden. 
  

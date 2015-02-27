@@ -2,7 +2,7 @@
 Syntax Summary
 ========================
 
-## Überschrift Level 2
+## Markdown Syntax (Überschrift Level 2)
 **Fett**, *kursiv*
 
 1. Nummerierte Liste
@@ -35,7 +35,7 @@ Siehe Abbildung \ref{fig:demo1}
 Siehe Kapitel [Syntax Summary] auf Seite \pageref{syntax-summary}
 
 
-### Bilder Überschrift Level 3
+### Bilder (Überschrift Level 3)
 
 Einfaches Bild ![BFH Logo](bilder/BFH_Logo_B.png) (Inline): 
 
