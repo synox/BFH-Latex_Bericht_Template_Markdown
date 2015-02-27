@@ -1,6 +1,6 @@
 # Einleitung
 
-Dieses Template ist eine Variante des BFH-Latex-Template vom BFH-Intranet. Zusätzlich wurde implementiert: 
+Dieses Template ist eine Variante des [BFH-Latex-Template vom BFH-Intranet](https://intranet.bfh.ch/TI/de/Dienste/kompr/pr%C3%A4sentationen/Seiten/default.aspx). Zusätzlich wurde implementiert: 
 
  - Zusammenfassung als Style-Klasse (bfh_template.cls)
  - Verwendung von Markdown-Syntax
@@ -36,7 +36,7 @@ Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen.
  
  * Zitate wie [@juergens:einfuehrung] werden mit \autocite{} umgesetzt. Die verwendeten Packages kennen den Befehl nicht, daher gibt es im `bfh_template.cls` ein Alias dafür. 
 
-
-   
-   https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
-   /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
+ * für rubber braucht es ein paar anpassungen:    https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
+    /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
+    
+    
