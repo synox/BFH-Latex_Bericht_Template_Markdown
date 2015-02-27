@@ -17,6 +17,7 @@ Linux/Unix/OSX System mit
  - Pandoc
  - make
  - latex
+ - sre/rubber (fork, https://github.com/sre/rubber)
  
 ## Verwendung
 
@@ -26,7 +27,7 @@ Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen.
  
  `make markdown` wandelt alle `.md` dateien in .md.tex` um. Diese müssen noch in `main.tex` eingebunden werden. 
  
- `make test` generiert das PDF und testet, ob das PDF den Erwartungen entspricht. 
+ `make all test` generiert das PDF und testet, ob das PDF den Erwartungen entspricht. 
  
  `make clean` entfernt temporäre Dateien des Latex-Prozesses. 
  
@@ -39,5 +40,5 @@ Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen.
 
  * für rubber braucht es ein paar anpassungen:    https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
     /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
-    
+ * Fork https://github.com/sre/rubber hat Modul für glossaries, das benötigt wird
     
