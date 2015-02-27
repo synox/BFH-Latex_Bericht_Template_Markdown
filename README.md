@@ -30,7 +30,8 @@ Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen.
  
  `make clean` entfernt temporäre Dateien des Latex-Prozesses. 
  
- # Developer Notes
+ 
+ ## Developer Notes
  
  Bei der Verwendung von Pandoc gibt es zurzeit ein paar Einschränkungen: 
  
