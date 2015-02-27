@@ -3,6 +3,9 @@ all: main.pdf
 
 main.pdf: clean markdown run-1 bibtex glossar run-2 run-3
 
+preview: markdown run-1
+	open main.pdf
+
 markdown: 
 	@# convert markdown files to latex
 	@find . -type f -name "*.md"  -print0 | while IFS= read -r -d '' file; do \
@@ -28,7 +31,7 @@ run-1 run-2 run-3:
 	)
 
 open: main.pdf
-	open template.pdf
+	open main.pdf
 
 test: clean-all main.pdf
 	ps2ascii main.pdf > main.txt
