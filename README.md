@@ -1,44 +1,57 @@
-# Einleitung
+# Markdown + Latex für Thesis
 
-Dieses Template ist eine Variante des [BFH-Latex-Template vom BFH-Intranet](https://intranet.bfh.ch/TI/de/Dienste/kompr/pr%C3%A4sentationen/Seiten/default.aspx). Zusätzlich wurde implementiert: 
+Dieses Template ist eine Variante des [BFH-Latex-Template vom BFH-Intranet](https://intranet.bfh.ch/TI/de/Dienste/kompr/pr%C3%A4sentationen/Seiten/default.aspx) mit:  
 
- - Zusammenfassung als Style-Klasse (bfh_template.cls)
- - Verwendung von Markdown-Syntax
- - Einfaches Makefile
+ - Style-Klasse (`bfh_template.cls`) ->  einfacheres `main.tex`
+ - Markdown-Syntax (auch Latex-Befehle möglich)
+ - simples Makefile
  
-Nicht benötigte Teile können im `main.tex` einfach entfernt werden. Zur Verwendung der Tools und von Latex siehe das original Template. In diesem Template werden die Markdown-Spezialitäten erklärt. 
- 
-In Markdown ist die Verwendung von Latex weiterhin möglich. Es können also die Vorteile beider Tools verwendet werden. 
- 
-## Voraussetzungen
+Die integration von Markdown wurde mit  [Pandoc](http://pandoc.com/) umgesetzt. 
 
-Linux/Unix/OSX System mit 
+ 
+Voraussetzungen
+--------------------
 
- - Pandoc
+Linux/Unix/Mac OSX System mit 
+
+ - [Pandoc](http://pandoc.com/)
  - make
- - latex
- - sre/rubber (fork, https://github.com/sre/rubber)
+ - Latex ([MacTeX](https://www.tug.org/mactex/))
+ - "sre/rubber" (fork, https://github.com/sre/rubber) 
  
-## Verwendung
+Verwendung
+--------------------
+ - Git clone / zip download
+ - Unnötige Features/Kapitel auskommentieren in `main.tex`
+ - Details einstellen in `bfh_template.cls`. (z.B. für einseitigen Druck `twoside` entfernen).
+ - Markdown-Dateien mit Endung `.md` anlegen und in `main.tex` mit `include` einbinden.
+ - [kapitel/demo.md](kapitel/demo.md) zeigt die wichtigste Syntax
 
-Als git-repo oder als ZIP herunterladen und an eigene Bedürfnise anpassen. 
+### Build actions
  
- `make all` generiert das PDF
- 
- `make markdown` wandelt alle `.md` dateien in .md.tex` um. Diese müssen noch in `main.tex` eingebunden werden. 
- 
- `make all test` generiert das PDF und testet, ob das PDF den Erwartungen entspricht. 
- 
- `make clean` entfernt temporäre Dateien des Latex-Prozesses. 
- 
- 
- ## Developer Notes
- 
- Bei der Verwendung von Pandoc gibt es zurzeit ein paar Einschränkungen: 
- 
- * Zitate wie [@juergens:einfuehrung] werden mit \autocite{} umgesetzt. Die verwendeten Packages kennen den Befehl nicht, daher gibt es im `bfh_template.cls` ein Alias dafür. 
+- `make pdf`: convert `.md` and create pdf
+- `make clean`: remove temp. / `.md.tex` files
 
- * für rubber braucht es ein paar anpassungen:    https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
-    /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
- * Fork https://github.com/sre/rubber hat Modul für glossaries, das benötigt wird
+For debugging:
+
+- `make markdown`: (only) convert `.md` -> `.md.tex` 
+- `make rubber`: (only) create pdf (allows editing temp. `.md.tex` files.)
+- `make pdf test`: create PDF and compare with expected pdf
+ 
+
+Troubleshooting
+--------------------
+
+### Problem makeindex: openout_any / "I can't write on file ...""
+
+Lösung: https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
+
+Auf meinem Mac ist es in der Datei: `  /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf` 
+ 
+Developer Notes
+--------------------
+Notes to developers / forkers:  
+
+ * Zitate wie [@juergens:einfuehrung] werden mit \autocite{} umgesetzt. Die von BFH verwendeten Packages kennen den Befehl nicht. Damit es trotzdem funktioniert  gibt es im `bfh_template.cls` ein Alias dafür. 
+ * Es wird ein der [Fork](https://github.com/sre/rubber) von [Rubber](https://launchpad.net/rubber/) verwendet, es es das Modul `glossaries` anbietet.
     
