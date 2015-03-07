@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 RUBBER_OPTIONS=--module bibtex --module index --module makeidx --module glossaries
 
 pdf: markdown rubber 
