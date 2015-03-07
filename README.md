@@ -18,6 +18,7 @@ Linux/Unix/Mac OSX System mit
  - make
  - Latex ([MacTeX](https://www.tug.org/mactex/))
  - "sre/rubber" (fork, https://github.com/sre/rubber) 
+ - `openout_any = r` gesetzt in `/usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf` [Anleitung](https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/)
  
 Verwendung
 --------------------
@@ -43,12 +44,7 @@ For debugging:
 Troubleshooting
 --------------------
 
-### Problem makeindex: openout_any / "I can't write on file ...""
 
-Lösung: https://nvcleemp.wordpress.com/2011/03/13/curing-latexs-paranoia/
-
-Auf meinem Mac ist es in der Datei: `  /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf` 
- 
 Developer Notes
 --------------------
 Notes to developers / forkers:  
@@ -59,4 +55,5 @@ Notes to developers / forkers:
 
 Further resources
 -------------------
+ * Einführung in Latex und Links zu weiteren Informationen: https://www.tug.org/mactex/src/WelcomeToMacTeX.pdf
  * Einführung in Latex: http://latex.hpfsc.de/content/latex_tutorial/literatur_bibtex/
