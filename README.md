@@ -23,6 +23,7 @@ Verwendung
 --------------------
  - Git clone / zip download
  - Unnötige Features/Kapitel auskommentieren in `main.tex`
+ - Pfad sollte keine leerzeichen enthalten, sonst gibt es Probleme mit einigen Tools.
  - Details einstellen in `bfh_template.cls`. (z.B. für einseitigen Druck `twoside` entfernen).
  - Markdown-Dateien mit Endung `.md` anlegen und in `main.tex` mit `include` einbinden.
  - [kapitel/demo.md](kapitel/demo.md) zeigt die wichtigste Syntax
